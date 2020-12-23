@@ -5,11 +5,6 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-/**
- * HOY FED NAKIKITA MO BA 'TO??
- * @author Nichol
- * uu kita ko 
- */
 
 
 public class Main extends Application {
