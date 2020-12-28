@@ -58,16 +58,16 @@ public class Card {
 		return this.color == card.getColor();
 	}
 	
-	public String getCardName() 
+	public String toString() 
 	{
 		/*
-		 * /for file fetch purposes. <value><suit>.png
-		 * ex. 10C.png -> A club with value of 10, 
+		 * /for file fetch purposes. <value><suit>
+		 * ex. 10C-> A club with value of 10, 
 		 * tingnan niyo sa data folder andoon yung mga cards
 		 */
-		
+
 		String[] values = {"", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10","J", "Q","K"};
 		
-		return "" + values[this.value] + this.suit + ".png";
+		return "" + values[this.value] + this.suit;
 	}
 }
