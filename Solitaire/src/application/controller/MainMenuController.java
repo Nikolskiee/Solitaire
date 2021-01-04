@@ -17,7 +17,22 @@ public class MainMenuController {
 	@FXML
 	public void showGame()
 	{
-		main.startGame();
+		if(Main.isWaste1)
+		{
+			main.exit();
+			main.startGameOne();
+			
+		}
+		else 
+		{
+			main.exit();
+			main.startGameThree();
+		}
+	}
+	
+	@FXML void showMode()
+	{
+		main.startMode();
 	}
 	
 	@FXML

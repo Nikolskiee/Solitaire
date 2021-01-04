@@ -27,5 +27,10 @@
             <Font name="Verdana" size="16.0" />
          </font>
       </Button>
+      <Button layoutX="225.0" layoutY="291.0" mnemonicParsing="false" onAction="#showMode" prefHeight="50.0" prefWidth="150.0" text="Mode">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

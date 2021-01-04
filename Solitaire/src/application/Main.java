@@ -2,9 +2,11 @@ package application;
 	
 import java.io.IOException;
 
-import application.controller.GameController;
+import application.controller.GameOneController;
+import application.controller.GameThreeController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
+import application.controller.ModeController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Modality;
@@ -57,7 +59,7 @@ public class Main extends Application {
 	
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
-			secondaryStage.initModality(Modality.APPLICATION_MODAL);
+			secondaryStage.initModality( Modality.APPLICATION_MODAL);
 	
 			secondaryStage.initOwner(primaryStage);
 			secondaryStage.setScene(scene);
@@ -70,11 +72,11 @@ public class Main extends Application {
 		}
 	}
 	
-	public void startGame()
+	public void startGameOne() //Shows the "Game" as primary stage.
 	{
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("view/GameView.fxml"));
+			loader.setLocation(Main.class.getResource("view/GameOneView.fxml"));
 			AnchorPane game = (AnchorPane) loader.load();
 
 			Scene scene = new Scene(game);
@@ -82,13 +84,58 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
-			GameController controller = loader.getController();
+			GameOneController controller = loader.getController();
 			controller.setMain(this);
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public void startGameThree()
+	{
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/GameThreeView.fxml"));
+			AnchorPane game = (AnchorPane) loader.load();
+
+			Scene scene = new Scene(game);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+			GameThreeController controller = loader.getController();
+			controller.setMain(this);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void startMode()
+	{
+		try
+		{
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/ModeView.fxml"));
+			AnchorPane view = (AnchorPane) loader.load();
+	
+			Scene scene = new Scene(view);
+			Stage secondaryStage = new Stage();
+			secondaryStage.initModality( Modality.APPLICATION_MODAL);
+	
+			secondaryStage.initOwner(primaryStage);
+			secondaryStage.setScene(scene);
+			secondaryStage.show();
+			
+			ModeController controller = loader.getController();
+			controller.setStage(secondaryStage);
+	
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+	
 	
 	public void exit() //closes the program.
 	{
