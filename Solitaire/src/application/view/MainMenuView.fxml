@@ -12,7 +12,7 @@
             <Font name="Showcard Gothic" size="75.0" />
          </font>
       </Label>
-      <Button layoutX="225.0" layoutY="228.0" mnemonicParsing="false" onAction="#showGame" prefHeight="50.0" prefWidth="150.0" text="New Game">
+      <Button layoutX="227.0" layoutY="275.0" mnemonicParsing="false" onAction="#showGame" prefHeight="50.0" prefWidth="150.0" text="New Game">
          <font>
             <Font name="Verdana" size="20.0" />
          </font>
@@ -25,11 +25,6 @@
       <Button layoutX="382.0" layoutY="421.0" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="60.0" text="Exit">
          <font>
             <Font name="Verdana" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="225.0" layoutY="291.0" mnemonicParsing="false" onAction="#showMode" prefHeight="50.0" prefWidth="150.0" text="Mode">
-         <font>
-            <Font name="Verdana" size="20.0" />
          </font>
       </Button>
    </children>

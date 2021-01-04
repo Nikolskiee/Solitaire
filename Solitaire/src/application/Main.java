@@ -20,7 +20,6 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	
 	Stage primaryStage; //stores the "front" view of the application.
-	public static boolean isWaste1 = true; // true if waste is 1, false if waste is 3.
 	
 	
 	@Override
@@ -129,6 +128,7 @@ public class Main extends Application {
 			secondaryStage.show();
 			
 			ModeController controller = loader.getController();
+			controller.setMain(this);
 			controller.setStage(secondaryStage);
 	
 		} catch (IOException ioe) {

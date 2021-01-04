@@ -6,8 +6,14 @@ import javafx.stage.Stage;
 
 public class ModeController {
 	
+	Main main;
 	
 	private Stage stage;
+	
+	public void setMain(Main main)
+	{
+		this.main = main;
+	}
 	
 	public void setStage(Stage stage)
 	{
@@ -17,14 +23,16 @@ public class ModeController {
 	@FXML
 	public void setModeAs1Waste()
 	{
-		Main.isWaste1 = true;
+		main.exit();
+		main.startGameOne();
 		stage.close();
 	}
 	
 	@FXML
 	public void setModeAs3Waste()
 	{
-		Main.isWaste1 = false;
+		main.exit();
+		main.startGameThree();
 		stage.close();
 	}
 }
