@@ -9,15 +9,15 @@ public class MainMenuController {
 	
 	Main main;
 	
-	@FXML
-	Button highScoreBtn;
-	
-	@FXML
-	Button exitBtn;
-	
 	public void setMain(Main main)
 	{
 		this.main = main;
+	}
+	
+	@FXML
+	public void showGame()
+	{
+		main.startGame();
 	}
 	
 	@FXML
@@ -31,6 +31,7 @@ public class MainMenuController {
 	{
 		main.exit();
 	}
+	
 	
 	
 	

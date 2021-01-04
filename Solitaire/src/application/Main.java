@@ -2,6 +2,7 @@ package application;
 	
 import java.io.IOException;
 
+import application.controller.GameController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
 import javafx.application.Application;
@@ -17,6 +18,7 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	
 	Stage primaryStage; //stores the "front" view of the application.
+	public static boolean isWaste1 = true; // true if waste is 1, false if waste is 3.
 	
 	
 	@Override
@@ -65,6 +67,26 @@ public class Main extends Application {
 	
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
+		}
+	}
+	
+	public void startGame()
+	{
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/GameView.fxml"));
+			AnchorPane game = (AnchorPane) loader.load();
+
+			Scene scene = new Scene(game);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+			GameController controller = loader.getController();
+			controller.setMain(this);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
