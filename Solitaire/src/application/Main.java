@@ -41,6 +41,11 @@ public class Main extends Application {
 		}
 	}
 	
+	public void startHighScore() //shows the "High Score" as secondary stage.
+	{
+		
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
