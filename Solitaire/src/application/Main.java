@@ -1,8 +1,13 @@
 package application;
 	
+import java.io.IOException;
+
+import application.controller.HighScoreController;
+import application.controller.HistoryController;
 import application.controller.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -43,8 +48,28 @@ public class Main extends Application {
 	
 	public void startHighScore() //shows the "High Score" as secondary stage.
 	{
-		
+		try
+		{
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/HighScoreView.fxml"));
+			AnchorPane view = (AnchorPane) loader.load();
+	
+			Scene scene = new Scene(view);
+			Stage secondaryStage = new Stage();
+			secondaryStage.initModality(Modality.APPLICATION_MODAL);
+	
+			secondaryStage.initOwner(primaryStage);
+			secondaryStage.setScene(scene);
+			secondaryStage.show();
+			
+			HighScoreController controller = loader.getController();
+	
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);
