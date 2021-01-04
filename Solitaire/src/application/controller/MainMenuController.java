@@ -2,8 +2,7 @@ package application.controller;
 
 import application.Main;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
+
 
 public class MainMenuController {
 	

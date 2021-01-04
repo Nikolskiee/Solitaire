@@ -10,6 +10,8 @@ public class GameThreeController {
 	public void setMain(Main main)
 	{
 		this.main = main;
+		System.out.println("Welcome! " + Main.player);
+		System.out.println("Mode: 3 Wastes");
 	}
 	
 	@FXML

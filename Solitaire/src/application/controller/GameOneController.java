@@ -10,6 +10,8 @@ public class GameOneController
 	public void setMain(Main main)
 	{
 		this.main = main;
+		System.out.println("Welcome! " + Main.player);
+		System.out.println("Mode: 1 Waste");
 	}
 	
 	@FXML

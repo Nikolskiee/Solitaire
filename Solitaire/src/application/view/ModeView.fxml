@@ -2,17 +2,24 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModeController">
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModeController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="27.0" text="Game Mode">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="14.0" text="What's your name?">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <Button layoutX="92.0" layoutY="94.0" mnemonicParsing="false" onAction="#setModeAs1Waste" text="1 Waste" AnchorPane.leftAnchor="75.0" />
-      <Button layoutX="158.0" layoutY="94.0" mnemonicParsing="false" onAction="#setModeAs3Waste" text="3 Wastes" AnchorPane.rightAnchor="75.0" />
+      <Button layoutX="121.0" layoutY="150.0" mnemonicParsing="false" onAction="#setModeAs1Waste" text="1 Waste" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="120.0" />
+      <Button layoutX="213.0" layoutY="150.0" mnemonicParsing="false" onAction="#setModeAs3Waste" text="3 Wastes" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="120.0" />
+      <TextField fx:id="name" alignment="CENTER" layoutX="127.0" layoutY="61.0" prefHeight="39.0" prefWidth="149.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="106.0" text="Game Mode?">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

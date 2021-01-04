@@ -2,11 +2,15 @@ package application.controller;
 
 import application.Main;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ModeController {
 	
 	Main main;
+	
+	@FXML
+	private TextField name;
 	
 	private Stage stage;
 	
@@ -23,16 +27,20 @@ public class ModeController {
 	@FXML
 	public void setModeAs1Waste()
 	{
-		main.exit();
-		main.startGameOne();
-		stage.close();
+
+			Main.player = name.getText();
+			main.exit();
+			main.startGameOne();
+			stage.close();
 	}
 	
 	@FXML
 	public void setModeAs3Waste()
 	{
-		main.exit();
-		main.startGameThree();
-		stage.close();
+
+			Main.player = name.getText();
+			main.exit();
+			main.startGameThree();
+			stage.close();
 	}
 }

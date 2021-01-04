@@ -7,19 +7,22 @@ import application.controller.GameThreeController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
 import application.controller.ModeController;
+import application.model.Scores;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 
 
 public class Main extends Application {
 	
 	Stage primaryStage; //stores the "front" view of the application.
+	static Scores[] high = new Scores[10];
+	public static String player = "Player";
+	
 	
 	
 	@Override
@@ -30,6 +33,10 @@ public class Main extends Application {
 	
 	public void startMainMenu() //brings the "Main Menu" view to the front.
 	{
+		high[0] = new Scores ("Ivan", 400);
+		high[1] = new Scores ("Derick", 300);
+		high[2] = new Scores ("Fed", 200);
+		high[3] = new Scores ("Nichol", 100);
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/MainMenuView.fxml"));
@@ -65,6 +72,7 @@ public class Main extends Application {
 			secondaryStage.show();
 			
 			HighScoreController controller = loader.getController();
+			controller.setTable(high);
 	
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
