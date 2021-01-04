@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 
 import application.controller.HighScoreController;
-import application.controller.HistoryController;
 import application.controller.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
