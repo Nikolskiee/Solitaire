@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.controller.HighScoreController">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.controller.HighScoreController">
+   <children>
+      <AnchorPane layoutX="-188.0" layoutY="-106.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="51.0" prefHeight="39.0" prefWidth="125.0" text="High Scores" textAlignment="CENTER" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+         <font>
+            <Font name="Gabriola" size="34.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
