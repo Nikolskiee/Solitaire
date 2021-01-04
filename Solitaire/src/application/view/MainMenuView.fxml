@@ -17,12 +17,12 @@
             <Font name="Verdana" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="161.0" layoutY="421.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="High Score">
+      <Button fx:id="highScoreBtn" layoutX="161.0" layoutY="421.0" mnemonicParsing="false" onAction="#showHighScore" prefHeight="35.0" prefWidth="120.0" text="High Score">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="382.0" layoutY="421.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" text="Exit">
+      <Button fx:id="exitBtn" layoutX="382.0" layoutY="421.0" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="60.0" text="Exit">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>

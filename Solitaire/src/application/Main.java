@@ -68,6 +68,11 @@ public class Main extends Application {
 		}
 	}
 	
+	public void exit() //closes the program.
+	{
+		primaryStage.close();
+	}
+	
 	
 	
 	public static void main(String[] args) {
