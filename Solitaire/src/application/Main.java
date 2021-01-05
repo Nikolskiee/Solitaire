@@ -33,10 +33,13 @@ public class Main extends Application {
 	
 	public void startMainMenu() //brings the "Main Menu" view to the front.
 	{
-		high[0] = new Scores ("Ivan", 400);
-		high[1] = new Scores ("Derick", 300);
-		high[2] = new Scores ("Fed", 200);
-		high[3] = new Scores ("Nichol", 100);
+		if(high[0] == null)
+		{
+			high[0] = new Scores ("Ivan", 400);
+			high[1] = new Scores ("Derick", 300);
+			high[2] = new Scores ("Fed", 200);
+			high[3] = new Scores ("Nichol", 100);
+		}
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/MainMenuView.fxml"));
