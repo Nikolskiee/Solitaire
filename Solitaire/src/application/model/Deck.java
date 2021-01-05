@@ -18,6 +18,7 @@ public class Deck {
 				deck[k++] = new Card(j, suit[i]);
 			}
 		}
+		this.shuffle();
 	}
 	
 	public void shuffle() //shuffles the deck

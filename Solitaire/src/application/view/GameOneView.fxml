@@ -25,11 +25,30 @@
             <Font size="75.0" />
          </font>
       </Label>
-      <VBox fx:id="tableu1" layoutX="149.0" layoutY="193.0" prefHeight="200.0" prefWidth="100.0" />
-      <AnchorPane fx:id="waste11" layoutX="145.0" layoutY="312.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;">
+      <VBox fx:id="tableu1" layoutX="149.0" layoutY="178.0" prefHeight="522.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="180.0">
          <children>
-            <AnchorPane fx:id="waste1" layoutX="1.0" layoutY="-14.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: blue;" />
+            <AnchorPane fx:id="waste1" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste11" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste12" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste13" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste14" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste15" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste16" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste17" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste18" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste19" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste110" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste111" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste112" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste113" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste114" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste115" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste116" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste117" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste118" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste119" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+            <AnchorPane fx:id="waste120" opacity="0.0" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
          </children>
-      </AnchorPane>
+      </VBox>
    </children>
 </AnchorPane>

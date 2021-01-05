@@ -4,6 +4,7 @@ import application.Main;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 public class GameOneController
 {
@@ -26,6 +27,9 @@ public class GameOneController
 	@FXML
 	AnchorPane foundationClubs;
 	
+	@FXML
+	VBox tableu1;
+	
 	public void setMain(Main main)
 	{
 		this.main = main;
@@ -36,6 +40,11 @@ public class GameOneController
 		foundationSpades.setStyle("-fx-background-image: url('/AS.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
 		foundationDiamonds.setStyle("-fx-background-image: url('/AD.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
 		foundationClubs.setStyle("-fx-background-image: url('/AC.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
+		
+		for(int i = 0; i < 10; i++)
+		{
+			tableu1.getChildren().get(i).setStyle("-fx-background-image: url('" + Main.deck.getCard(i) + ".jpg');-fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
+		}
 
 	}
 	

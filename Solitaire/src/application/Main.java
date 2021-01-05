@@ -7,6 +7,7 @@ import application.controller.GameThreeController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
 import application.controller.ModeController;
+import application.model.Deck;
 import application.model.Scores;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,7 @@ public class Main extends Application {
 	Stage primaryStage; //stores the "front" view of the application.
 	static Scores[] high = new Scores[1000000];
 	public static String player = "Player";
+	public static Deck deck = new Deck();
 	
 	
 	
