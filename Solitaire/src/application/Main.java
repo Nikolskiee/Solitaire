@@ -20,26 +20,26 @@ import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	
 	Stage primaryStage; //stores the "front" view of the application.
-	static Scores[] high = new Scores[10];
+	static Scores[] high = new Scores[1000000];
 	public static String player = "Player";
 	
 	
 	
 	@Override
 	public void start(Stage primaryStage) { //starts the application
-		this.primaryStage = primaryStage;
-		startMainMenu();
-	}
-	
-	public void startMainMenu() //brings the "Main Menu" view to the front.
-	{
-		if(high[0] == null)
+		if(high[0] == null) //initializes the table of high scores with imaginary pre-existing players
 		{
 			high[0] = new Scores ("Ivan", 400);
 			high[1] = new Scores ("Derick", 300);
 			high[2] = new Scores ("Fed", 200);
 			high[3] = new Scores ("Nichol", 100);
 		}
+		this.primaryStage = primaryStage;
+		startMainMenu();
+	}
+	
+	public void startMainMenu() //brings the "Main Menu" view to the front.
+	{
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/MainMenuView.fxml"));
@@ -76,6 +76,7 @@ public class Main extends Application {
 			
 			HighScoreController controller = loader.getController();
 			controller.setTable(high);
+			controller.setStage(secondaryStage);
 	
 		} catch (IOException ioe) {
 			ioe.printStackTrace();

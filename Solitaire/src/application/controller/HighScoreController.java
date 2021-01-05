@@ -54,6 +54,11 @@ public class HighScoreController {
 		tablePane.getChildren().addAll(table);	
 	}
 	
+	public void setStage(Stage stage)
+	{
+		this.stage = stage;
+	}
+	
 	@FXML
 	public void close()
 	{
