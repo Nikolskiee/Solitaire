@@ -5,8 +5,9 @@ public class Card {
 	private int value; // 1 - Ace; 2 to 10; 11 - Jack; 12 - Queen; 13 - King
 	private char suit; // C - Clubs; H - Hearts; D - Diamonds; S - Spades
 	private char color; // B - Black; R - Red
+	private boolean isTurnedUp;
 	
-	public Card(int value, char suit)
+	public Card(int value, char suit, boolean isTurnedUp)
 	{
 		this.value = value;
 		this.suit = suit;
@@ -19,6 +20,16 @@ public class Card {
 		{
 			this.color = 'B';
 		}
+		
+		this.isTurnedUp = isTurnedUp;
+	}
+	
+	public Card(Card card)
+	{
+		this.value = card.getValue();
+		this.suit = card.getSuit();
+		this.color = card.getColor();
+		this.isTurnedUp = card.isTurnedUp();
 	}
 	
 	public int getValue()
@@ -34,6 +45,16 @@ public class Card {
 	public char getColor()
 	{
 		return this.color;
+	}
+	
+	public boolean isTurnedUp()
+	{
+		return this.isTurnedUp;
+	}
+	
+	public void turnCardUp(boolean isTurnedUp)
+	{
+		this.isTurnedUp = isTurnedUp;
 	}
 	
 	public int cardDifference(Card card) //the absolute value difference of two cards
