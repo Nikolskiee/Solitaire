@@ -46,7 +46,7 @@ public class Main extends Application {
 			AnchorPane menu = (AnchorPane) loader.load();
 
 			Scene scene = new Scene(menu);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add("application/application.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
@@ -90,7 +90,7 @@ public class Main extends Application {
 			AnchorPane game = (AnchorPane) loader.load();
 
 			Scene scene = new Scene(game);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add("application/application.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
