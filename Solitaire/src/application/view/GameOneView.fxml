@@ -10,11 +10,11 @@
    <children>
       <Button layoutX="915.0" layoutY="661.0" mnemonicParsing="false" onAction="#endGame" text="End Game" />
       <AnchorPane fx:id="pile" layoutX="14.0" layoutY="14.0" onMouseClicked="#clickedPile" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
-      <AnchorPane fx:id="waste" layoutX="149.0" layoutY="20.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
-      <AnchorPane fx:id="foundationClubs" layoutX="737.0" layoutY="34.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
-      <AnchorPane fx:id="foundationDiamonds" layoutX="750.0" layoutY="20.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="150.0" />
-      <AnchorPane fx:id="foundationSpades" layoutX="618.0" layoutY="20.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="282.0" />
-      <AnchorPane fx:id="foundationHearts" layoutX="486.0" layoutY="20.0" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+      <AnchorPane fx:id="waste" layoutX="149.0" layoutY="20.0" onMouseClicked="#clickedOnWaste" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
+      <AnchorPane fx:id="foundationClubs" layoutX="737.0" layoutY="34.0" onMouseClicked="#clickedOnClubs" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <AnchorPane fx:id="foundationDiamonds" layoutX="750.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="150.0" />
+      <AnchorPane fx:id="foundationSpades" layoutX="618.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="282.0" />
+      <AnchorPane fx:id="foundationHearts" layoutX="486.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
       <Label layoutX="260.0" layoutY="20.0" text="Score:">
          <font>
             <Font size="30.0" />
