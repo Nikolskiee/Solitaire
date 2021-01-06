@@ -165,7 +165,7 @@ public class GameOneController
 		}
 		if(!isFirstClick && buffer[1] == null && buffer[0].isSameSuit(cardFoundationHearts[heartsPointer - 1]) && buffer[0].cardDifference(cardFoundationHearts[heartsPointer - 1]) == 1 && buffer[0].isGreater(cardFoundationHearts[heartsPointer - 1]))
 		{
-			cardFoundationHearts[heartsPointer - 1] = new Card(buffer[0]);
+			cardFoundationHearts[heartsPointer] = new Card(buffer[0]);
 			
 			if(fromWaste)
 			{
@@ -238,7 +238,7 @@ public class GameOneController
 		}
 		if(!isFirstClick && buffer[1] == null && buffer[0].isSameSuit(cardFoundationSpades[spadesPointer - 1]) && buffer[0].cardDifference(cardFoundationSpades[spadesPointer - 1]) == 1 && buffer[0].isGreater(cardFoundationSpades[spadesPointer - 1]))
 		{
-			cardFoundationSpades[spadesPointer - 1] = new Card(buffer[0]);
+			cardFoundationSpades[spadesPointer] = new Card(buffer[0]);
 			
 			if(fromWaste)
 			{
@@ -311,7 +311,7 @@ public class GameOneController
 		}
 		if(!isFirstClick && buffer[1] == null && buffer[0].isSameSuit(cardFoundationDiamonds[diamondsPointer - 1]) && buffer[0].cardDifference(cardFoundationDiamonds[diamondsPointer - 1]) == 1 && buffer[0].isGreater(cardFoundationDiamonds[diamondsPointer - 1]))
 		{
-			cardFoundationDiamonds[diamondsPointer - 1] = new Card(buffer[0]);
+			cardFoundationDiamonds[diamondsPointer] = new Card(buffer[0]);
 			
 			if(fromWaste)
 			{
@@ -384,7 +384,7 @@ public class GameOneController
 		}
 		if(!isFirstClick && buffer[1] == null && buffer[0].isSameSuit(cardFoundationClubs[clubsPointer - 1]) && buffer[0].cardDifference(cardFoundationClubs[clubsPointer - 1]) == 1 && buffer[0].isGreater(cardFoundationClubs[clubsPointer - 1]))
 		{
-			cardFoundationClubs[clubsPointer - 1] = new Card(buffer[0]);
+			cardFoundationClubs[clubsPointer] = new Card(buffer[0]);
 			
 			if(fromWaste)
 			{
