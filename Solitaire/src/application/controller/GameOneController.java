@@ -7,6 +7,7 @@ import application.model.Card;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 public class GameOneController
@@ -29,7 +30,7 @@ public class GameOneController
 	AnchorPane pile, waste, foundationHearts, foundationSpades, foundationDiamonds, foundationClubs;
 	
 	@FXML
-	VBox tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7;
+	StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7;
 	
 
 	public void setMain(Main main)
@@ -112,139 +113,34 @@ public class GameOneController
 			pile.setStyle("");
 		}
 		
-		tableu1.getChildren().clear();
-		tableu2.getChildren().clear();
-		tableu3.getChildren().clear();
-		tableu4.getChildren().clear();
-		tableu5.getChildren().clear();
-		tableu6.getChildren().clear();
-		tableu7.getChildren().clear();
+		StackPane[] tableu = {tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7};
 		
-		int i = 0;
-		
-		while(cardTableu[0][i] != null)
+		for(int j = 0; j < 7; j++)
 		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[0][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[0][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("");
-			}
-			tableu1.getChildren().add(card);
+			tableu[j].getChildren().clear();
 			
-			i++;
-		}
-		
-		i = 0;
+			int i = 0;
+			double y = 0;
+			while(cardTableu[j][i] != null)
+			{
+				Pane card = new Pane();
+				card.setPrefSize(100,150);
+				if(cardTableu[j][i].isTurnedUp())
+				{
+					card.setStyle("-fx-background-image: url('" + cardTableu[j][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
+				}
+				else
+				{
+					card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
+				}
 				
-		while(cardTableu[1][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[1][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[1][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
+				card.setTranslateY(y);
+				
+				y = y + 20;
+				
+				tableu[j].getChildren().add(card);
+				i++;
 			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu2.getChildren().add(card);
-			i++;
-		}
-		
-		i = 0;
-		
-		while(cardTableu[2][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[2][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[2][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu3.getChildren().add(card);
-			i++;
-		}
-		
-		i = 0;
-		
-		while(cardTableu[3][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[3][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[3][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu4.getChildren().add(card);
-			i++;
-		}
-		
-		i = 0;
-		
-		while(cardTableu[4][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[4][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[4][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu5.getChildren().add(card);
-			i++;
-		}
-		
-		i = 0;
-		
-		while(cardTableu[5][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[5][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[5][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu6.getChildren().add(card);
-			i++;
-		}
-		
-		i = 0;
-		
-		while(cardTableu[6][i] != null)
-		{
-			Pane card = new Pane();
-			card.setPrefSize(100,150);
-			if(cardTableu[6][i].isTurnedUp())
-			{
-				card.setStyle("-fx-background-image: url('" + cardTableu[6][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat");
-			}
-			else
-			{
-				card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
-			}
-			tableu7.getChildren().add(card);
-			i++;
 		}
 		
 		printInConsole();
