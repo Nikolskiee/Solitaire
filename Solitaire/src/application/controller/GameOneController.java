@@ -112,6 +112,14 @@ public class GameOneController
 			pile.setStyle("");
 		}
 		
+		tableu1.getChildren().clear();
+		tableu2.getChildren().clear();
+		tableu3.getChildren().clear();
+		tableu4.getChildren().clear();
+		tableu5.getChildren().clear();
+		tableu6.getChildren().clear();
+		tableu7.getChildren().clear();
+		
 		int i = 0;
 		
 		while(cardTableu[0][i] != null)
