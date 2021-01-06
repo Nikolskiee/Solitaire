@@ -23,8 +23,8 @@ public class Main extends Application {
 	Stage primaryStage; //stores the "front" view of the application.
 	static Scores[] high = new Scores[1000000];
 	public static String player = "Player";
-	public static Deck deck = new Deck();
-	
+	public static Deck deck;
+	public static int score;
 	
 	
 	@Override
@@ -42,6 +42,7 @@ public class Main extends Application {
 	
 	public void startMainMenu() //brings the "Main Menu" view to the front.
 	{
+		score = 0;
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/MainMenuView.fxml"));
@@ -87,6 +88,7 @@ public class Main extends Application {
 	
 	public void startGameOne() //Shows the "Game" as primary stage.
 	{
+		deck = new Deck();
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/GameOneView.fxml"));
@@ -107,6 +109,7 @@ public class Main extends Application {
 	
 	public void startGameThree()
 	{
+		deck = new Deck();
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/GameThreeView.fxml"));
