@@ -647,7 +647,7 @@ public class GameOneController
 			{
 				Pane card = new Pane();
 				card.setPrefSize(100, 150);
-				card.setStyle("-fx-background-color: #000000; -fx-opacity: 0.25");
+				card.setStyle("-fx-background-image url('gray.jpg'); -fx-background-repeat: no-repeat; -fx-opacity: 0.25");
 				int row = j;
 				card.setOnMouseClicked(event -> clickedOnTableu(row));
 				tableu[j].getChildren().add(card);
