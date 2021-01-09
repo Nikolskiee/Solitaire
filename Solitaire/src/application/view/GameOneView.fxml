@@ -20,7 +20,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="260.0" layoutY="22.0" prefHeight="146.0" prefWidth="202.0" text="0" textAlignment="RIGHT">
+      <Label fx:id="scoreboard" alignment="CENTER" layoutX="260.0" layoutY="22.0" prefHeight="146.0" prefWidth="202.0" text="0" textAlignment="RIGHT">
          <font>
             <Font size="75.0" />
          </font>

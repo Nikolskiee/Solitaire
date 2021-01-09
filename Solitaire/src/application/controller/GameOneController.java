@@ -5,6 +5,7 @@ package application.controller;
 import application.Main;
 import application.model.Card;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -44,6 +45,8 @@ public class GameOneController
 	@FXML
 	StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7;
 	
+	@FXML
+	Label scoreboard;
 
 	public void setMain(Main main)
 	{
@@ -96,6 +99,8 @@ public class GameOneController
 				wastePointer--;
 				pilePointer++;
 			}
+			
+			Main.score -= 100;
 		}
 		fromWaste = false;
 		fromHearts = false;
@@ -117,6 +122,7 @@ public class GameOneController
 				if(!cardTableu[i][j].isTurnedUp() && cardTableu[i][j+1] == null)
 				{
 					cardTableu[i][j].turnCardUp(true);
+					Main.score += 5;
 				}
 				j++;
 			}
@@ -155,7 +161,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			heartsPointer++;
 			fromHearts = false;
 			buffer = null;
@@ -184,7 +190,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			heartsPointer++;
 			buffer = null;
 			fromHearts = false;
@@ -205,6 +211,7 @@ public class GameOneController
 			buffer[0] = cardFoundationSpades[spadesPointer - 1];
 			fromSpades = true;
 			isFirstClick = false;
+			return;
 		}
 
 		if(!isFirstClick && buffer[1] == null && cardFoundationSpades[0] == null && buffer[0].toString().compareTo("AS") == 0)
@@ -228,7 +235,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			spadesPointer++;
 			buffer = null;
 			fromSpades = false;
@@ -257,7 +264,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			spadesPointer++;
 			fromSpades = false;
 			buffer = null;
@@ -279,6 +286,7 @@ public class GameOneController
 			buffer[0] = cardFoundationDiamonds[diamondsPointer - 1];
 			fromDiamonds = true;
 			isFirstClick = false;
+			return;
 		}
 		if(!isFirstClick && buffer[1] == null && cardFoundationDiamonds[0] == null && buffer[0].toString().compareTo("AD") == 0)
 		{
@@ -301,7 +309,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			diamondsPointer++;
 			fromDiamonds = false;
 			buffer = null;
@@ -330,7 +338,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			diamondsPointer++;
 			fromDiamonds = false;
 			buffer = null;
@@ -352,6 +360,7 @@ public class GameOneController
 			buffer[0] = cardFoundationClubs[clubsPointer - 1];
 			fromClubs = true;
 			isFirstClick = false;
+			return;
 		}
 		if(!isFirstClick && buffer[1] == null && cardFoundationClubs[0] == null && buffer[0].toString().compareTo("AC") == 0)
 		{
@@ -374,7 +383,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			clubsPointer++;
 			buffer = null;
 			fromClubs = false;
@@ -403,7 +412,7 @@ public class GameOneController
 				}
 			}
 			
-			
+			Main.score +=10;
 			clubsPointer++;
 			fromClubs = false;
 			buffer = null;
@@ -459,21 +468,25 @@ public class GameOneController
 			{
 				heartsPointer--;
 				cardFoundationHearts[heartsPointer] = null;
+				Main.score -=15;
 			}
 			else if (fromSpades)
 			{
 				spadesPointer--;
 				cardFoundationSpades[spadesPointer] = null;
+				Main.score -=15;
 			}
 			else if (fromDiamonds)
 			{
 				diamondsPointer--;
 				cardFoundationDiamonds[diamondsPointer] = null;
+				Main.score -=15;
 			}
 			else if (fromClubs)
 			{
 				clubsPointer--;
 				cardFoundationClubs[clubsPointer] = null;
+				Main.score -=15;
 			}
 			else
 			{
@@ -539,21 +552,25 @@ public class GameOneController
 				{
 					heartsPointer--;
 					cardFoundationHearts[heartsPointer] = null;
+					Main.score -=15;
 				}
 				else if (fromSpades)
 				{
 					spadesPointer--;
 					cardFoundationSpades[spadesPointer] = null;
+					Main.score -=15;
 				}
 				else if (fromDiamonds)
 				{
 					diamondsPointer--;
 					cardFoundationDiamonds[diamondsPointer] = null;
+					Main.score -=15;
 				}
 				else if (fromClubs)
 				{
 					clubsPointer--;
 					cardFoundationClubs[clubsPointer] = null;
+					Main.score -=15;
 				}
 				else
 				{
@@ -581,6 +598,10 @@ public class GameOneController
 	public void refreshScene()
 	{
 		updateTurnedUpCards();
+		
+		Main.score = (Main.score < 0) ? 0 : Main.score;
+		
+		scoreboard.setText("" + Main.score);
 		
 		if(cardFoundationHearts[0] != null)
 		{
