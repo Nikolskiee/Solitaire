@@ -159,6 +159,30 @@ public class Main extends Application {
 		primaryStage.close();
 	}
 	
+	public void recordScore(String name, int score)
+	{
+		int i = 0;
+		
+		Scores record = new Scores(name, score);
+		
+		while(true)
+		{
+			if(high[i] == null)
+			{
+				high[i] = record;
+				break;
+			}
+			if(high[i].getScore() < score)
+			{
+				Scores swap = high[i];
+				high[i] = record;
+				record = swap;
+			}	
+			i++;
+		}
+		
+	}
+	
 	
 	
 	public static void main(String[] args) {
