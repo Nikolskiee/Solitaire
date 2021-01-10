@@ -21,7 +21,8 @@ import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	
 	Stage primaryStage; //stores the "front" view of the application.
-	static Scores[] high = new Scores[1000000];
+	public static Scores[] high = new Scores[1000000];
+	public static int mode;
 	public static String player = "Player";
 	public static Deck deck;
 	public static int score;

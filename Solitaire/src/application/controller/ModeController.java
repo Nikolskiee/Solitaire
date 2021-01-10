@@ -29,6 +29,7 @@ public class ModeController {
 	{
 
 			Main.player = name.getText();
+			Main.mode = 1;
 			main.exit();
 			main.startGameOne();
 			stage.close();
@@ -39,8 +40,9 @@ public class ModeController {
 	{
 
 			Main.player = name.getText();
+			Main.mode = 3;
 			main.exit();
-			main.startGameThree();
+			main.startGameOne();
 			stage.close();
 	}
 }

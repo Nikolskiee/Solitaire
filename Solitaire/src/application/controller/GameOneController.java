@@ -40,13 +40,13 @@ public class GameOneController
 			
 			
 	@FXML
-	AnchorPane pile, waste, foundationHearts, foundationSpades, foundationDiamonds, foundationClubs;
+	AnchorPane pile, foundationHearts, foundationSpades, foundationDiamonds, foundationClubs;
 	
 	@FXML
-	StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7;
+	StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7, waste;
 	
 	@FXML
-	Label scoreboard;
+	Label scoreboard, name;
 
 	public void setMain(Main main)
 	{
@@ -85,10 +85,13 @@ public class GameOneController
 	{
 		if(cardPile[0] != null)
 		{
-			cardWaste[wastePointer] = new Card(cardPile[pilePointer]);
-			cardPile[pilePointer] = null;
-			wastePointer++;
-			pilePointer--;
+			for (int i = 0; i < Main.mode; i++)
+			{
+				cardWaste[wastePointer] = new Card(cardPile[pilePointer]);
+				cardPile[pilePointer] = null;
+				wastePointer++;
+				pilePointer--;
+			}
 		}
 		else
 		{
@@ -610,6 +613,7 @@ public class GameOneController
 		Main.score = (Main.score < 0) ? 0 : Main.score;
 		
 		scoreboard.setText("" + Main.score);
+		name.setText(Main.player);
 		
 		if(cardFoundationHearts[0] != null)
 		{
@@ -646,15 +650,26 @@ public class GameOneController
 		{
 			foundationClubs.setStyle("-fx-background-image: url('AC.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
 		}
-		
-		
-		if (cardWaste[0] != null)
+
+		int pointer = (wastePointer - Main.mode < 0)? 0 : wastePointer - Main.mode;
+		waste.getChildren().clear();
+		int translate = 0;
+		while (pointer < wastePointer)
 		{
-			waste.setStyle("-fx-background-image: url('" + cardWaste[wastePointer - 1] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat" );
-		}
-		else
-		{
-			waste.setStyle("");
+			if(cardWaste[pointer] != null)
+			{
+				Pane card = new Pane();
+				card.setPrefSize(100, 150);
+				card.setStyle("-fx-background-image: url('" + cardWaste[pointer] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+				if(pointer == wastePointer - 1)
+				{
+					card.setOnMouseClicked(event -> clickedOnWaste());
+				}
+				card.setTranslateX(translate);
+				waste.getChildren().add(card);
+				translate += 30;
+			}
+			pointer++;
 		}
 		
 		if (cardPile[0] != null)
