@@ -164,6 +164,7 @@ public class GameOneController
 			Main.score +=10;
 			heartsPointer++;
 			fromHearts = false;
+			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
 			refreshScene();
@@ -194,6 +195,7 @@ public class GameOneController
 			heartsPointer++;
 			buffer = null;
 			fromHearts = false;
+			fromWaste = false;
 			isFirstClick = true;
 			refreshScene();
 			return;
@@ -239,6 +241,7 @@ public class GameOneController
 			spadesPointer++;
 			buffer = null;
 			fromSpades = false;
+			fromWaste = false;
 			isFirstClick = true;
 			refreshScene();
 			return;
@@ -267,6 +270,7 @@ public class GameOneController
 			Main.score +=10;
 			spadesPointer++;
 			fromSpades = false;
+			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
 			refreshScene();
@@ -312,6 +316,7 @@ public class GameOneController
 			Main.score +=10;
 			diamondsPointer++;
 			fromDiamonds = false;
+			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
 			refreshScene();
@@ -341,6 +346,7 @@ public class GameOneController
 			Main.score +=10;
 			diamondsPointer++;
 			fromDiamonds = false;
+			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
 			refreshScene();
@@ -387,6 +393,7 @@ public class GameOneController
 			clubsPointer++;
 			buffer = null;
 			fromClubs = false;
+			fromWaste = false;
 			isFirstClick = true;
 			refreshScene();
 			return;
@@ -415,6 +422,7 @@ public class GameOneController
 			Main.score +=10;
 			clubsPointer++;
 			fromClubs = false;
+			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
 			refreshScene();
