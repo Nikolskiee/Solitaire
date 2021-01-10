@@ -137,6 +137,12 @@ public class GameOneController
 	@FXML
 	public void clickedOnHearts()
 	{
+		if(!isFirstClick && cardFoundationHearts[0] == null && buffer[0].toString().compareTo("AH") != 0)
+		{
+			buffer = null;
+			isFirstClick = true;
+			return;	
+		}
 		if(isFirstClick)
 		{
 			buffer = new Card[52];		
@@ -212,6 +218,12 @@ public class GameOneController
 	@FXML
 	public void clickedOnSpades()
 	{
+		if(!isFirstClick && cardFoundationSpades[0] == null && buffer[0].toString().compareTo("AS") != 0)
+		{
+			buffer = null;
+			isFirstClick = true;
+			return;	
+		}
 		if(isFirstClick)
 		{
 			buffer = new Card[52];		
@@ -289,6 +301,12 @@ public class GameOneController
 	@FXML
 	public void clickedOnDiamonds()
 	{
+		if(!isFirstClick && cardFoundationDiamonds[0] == null && buffer[0].toString().compareTo("AD") != 0)
+		{
+			buffer = null;
+			isFirstClick = true;
+			return;	
+		}
 		if(isFirstClick)
 		{
 			buffer = new Card[52];		
@@ -365,6 +383,12 @@ public class GameOneController
 	@FXML
 	public void clickedOnClubs()
 	{
+		if(!isFirstClick && cardFoundationClubs[0] == null && buffer[0].toString().compareTo("AC") != 0)
+		{
+			buffer = null;
+			isFirstClick = true;
+			return;	
+		}
 		if(isFirstClick)
 		{
 			buffer = new Card[52];		
