@@ -102,8 +102,10 @@ public class GameOneController
 				wastePointer--;
 				pilePointer++;
 			}
-			
-			Main.score -= 100;
+			if(Main.mode == 1)
+			{
+				Main.score -= 100;
+			}
 		}
 		fromWaste = false;
 		fromHearts = false;
