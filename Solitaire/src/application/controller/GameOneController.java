@@ -85,7 +85,7 @@ public class GameOneController
 	{
 		if(cardPile[0] != null)
 		{
-			for (int i = 0; i < Main.mode; i++)
+			for (int i = 0; i < Main.mode && i <= pilePointer; i++)
 			{
 				cardWaste[wastePointer] = new Card(cardPile[pilePointer]);
 				cardPile[pilePointer] = null;
