@@ -704,7 +704,7 @@ public class GameOneController
 		}
 		else
 		{
-			pile.setStyle("-fx-background-image: url('gray.jpg'); -fx-background-size: 100%; -fx-opacity: 0.10");
+			pile.setStyle("");
 		}
 		
 		StackPane[] tableu = {tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7};
