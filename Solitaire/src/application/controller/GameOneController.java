@@ -643,38 +643,38 @@ public class GameOneController
 		
 		if(cardFoundationHearts[0] != null)
 		{
-			foundationHearts.setStyle("-fx-background-image: url('" + cardFoundationHearts[heartsPointer - 1] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1");
+			foundationHearts.setStyle("-fx-background-image: url('" + cardFoundationHearts[heartsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
 		}
 		else
 		{
-			foundationHearts.setStyle("-fx-background-image: url('AH.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
+			foundationHearts.setStyle("-fx-background-image: url('AH.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
 		}
 		
 		if(cardFoundationSpades[0] != null)
 		{
-			foundationSpades.setStyle("-fx-background-image: url('" + cardFoundationSpades[spadesPointer - 1] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1");
+			foundationSpades.setStyle("-fx-background-image: url('" + cardFoundationSpades[spadesPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
 		}
 		else
 		{
-			foundationSpades.setStyle("-fx-background-image: url('AS.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
+			foundationSpades.setStyle("-fx-background-image: url('AS.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
 		}
 		
 		if(cardFoundationDiamonds[0] != null)
 		{
-			foundationDiamonds.setStyle("-fx-background-image: url('" + cardFoundationDiamonds[diamondsPointer - 1] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1");
+			foundationDiamonds.setStyle("-fx-background-image: url('" + cardFoundationDiamonds[diamondsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
 		}
 		else
 		{
-			foundationDiamonds.setStyle("-fx-background-image: url('AD.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
+			foundationDiamonds.setStyle("-fx-background-image: url('AD.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
 		}
 		
 		if(cardFoundationClubs[0] != null)
 		{
-			foundationClubs.setStyle("-fx-background-image: url('" + cardFoundationClubs[clubsPointer - 1] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1");
+			foundationClubs.setStyle("-fx-background-image: url('" + cardFoundationClubs[clubsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
 		}
 		else
 		{
-			foundationClubs.setStyle("-fx-background-image: url('AC.jpg'); -fx-background-size: 100%; -fx-opacity: 0.25");
+			foundationClubs.setStyle("-fx-background-image: url('AC.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
 		}
 
 		int pointer = (wastePointer - Main.mode < 0)? 0 : wastePointer - Main.mode;
