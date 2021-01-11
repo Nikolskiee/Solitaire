@@ -33,7 +33,7 @@ public class Scores {
 		this.name.set(name);
 	}
 	
-	//getter for score
+	//setter for score
 	public void setScore(int score){
 		this.score.set(score);
 	}
