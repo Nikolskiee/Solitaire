@@ -143,7 +143,7 @@ public class GameOneController
 			isFirstClick = true;
 			return;	
 		}
-		if(isFirstClick)
+		if(isFirstClick && cardFoundationHearts[0] != null)
 		{
 			buffer = new Card[52];		
 			buffer[0] = cardFoundationHearts[heartsPointer - 1];
@@ -224,7 +224,7 @@ public class GameOneController
 			isFirstClick = true;
 			return;	
 		}
-		if(isFirstClick)
+		if(isFirstClick && cardFoundationSpades[0] != null)
 		{
 			buffer = new Card[52];		
 			buffer[0] = cardFoundationSpades[spadesPointer - 1];
@@ -307,7 +307,7 @@ public class GameOneController
 			isFirstClick = true;
 			return;	
 		}
-		if(isFirstClick)
+		if(isFirstClick && cardFoundationDiamonds[0] != null)
 		{
 			buffer = new Card[52];		
 			buffer[0] = cardFoundationDiamonds[diamondsPointer - 1];
@@ -389,7 +389,7 @@ public class GameOneController
 			isFirstClick = true;
 			return;	
 		}
-		if(isFirstClick)
+		if(isFirstClick && cardFoundationClubs[0] != null)
 		{
 			buffer = new Card[52];		
 			buffer[0] = cardFoundationClubs[clubsPointer - 1];
