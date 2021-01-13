@@ -32,10 +32,16 @@ public class Main extends Application {
 	public void start(Stage primaryStage) { //starts the application
 		if(high[0] == null) //initializes the table of high scores with imaginary pre-existing players
 		{
-			high[0] = new Scores ("Ivan", 400);
-			high[1] = new Scores ("Derick", 300);
-			high[2] = new Scores ("Fed", 200);
-			high[3] = new Scores ("Nichol", 100);
+			high[0] = new Scores ("Ivan", 500);
+			high[1] = new Scores ("Derick", 450);
+			high[2] = new Scores("Fed", 400);
+			high[3] = new Scores("Nichol", 350);
+			high[4] = new Scores("Romaine", 300);
+			high[5] = new Scores("Dan", 250);
+			high[6] = new Scores ("Will", 200);
+			high[7] = new Scores ("Cornelius", 150);
+			high[8] = new Scores ("Beatrice", 100);
+			high[9] = new Scores ("Sekki", 50);
 		}
 		this.primaryStage = primaryStage;
 		startMainMenu();
