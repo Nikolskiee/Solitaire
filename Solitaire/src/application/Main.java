@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 
 import application.controller.GameOneController;
-import application.controller.GameThreeController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
 import application.controller.ModeController;
@@ -107,27 +106,6 @@ public class Main extends Application {
 			primaryStage.show();
 			
 			GameOneController controller = loader.getController();
-			controller.setMain(this);
-			
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void startGameThree()
-	{
-		deck = new Deck();
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("view/GameThreeView.fxml"));
-			AnchorPane game = (AnchorPane) loader.load();
-
-			Scene scene = new Scene(game);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			
-			GameThreeController controller = loader.getController();
 			controller.setMain(this);
 			
 		} catch(Exception e) {
