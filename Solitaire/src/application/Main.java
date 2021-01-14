@@ -56,6 +56,8 @@ public class Main extends Application {
 
 			Scene scene = new Scene(menu);
 			scene.getStylesheets().add("application/application.css");
+			primaryStage.setTitle("Solitaire");
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
@@ -78,7 +80,8 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-	
+			secondaryStage.setTitle("Solitaire");
+			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
 			secondaryStage.setScene(scene);
 			secondaryStage.show();
@@ -102,6 +105,8 @@ public class Main extends Application {
 
 			Scene scene = new Scene(game);
 			scene.getStylesheets().add("application/application.css");
+			primaryStage.setTitle("Solitaire");
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
@@ -124,7 +129,8 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-	
+			secondaryStage.setTitle("Solitaire");
+			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
 			secondaryStage.setScene(scene);
 			secondaryStage.show();
