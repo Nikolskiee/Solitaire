@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenuController">
    <children>
-      <Label layoutX="115.0" layoutY="102.0" lineSpacing="5.0" text="SOLITAIRE">
+      <Label layoutX="115.0" layoutY="102.0" lineSpacing="5.0" text="SOLITAIRE" textFill="WHITE">
          <font>
             <Font name="Showcard Gothic" size="75.0" />
          </font>

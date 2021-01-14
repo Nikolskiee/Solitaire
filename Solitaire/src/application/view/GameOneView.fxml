@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
    <children>
       <Button layoutX="915.0" layoutY="661.0" mnemonicParsing="false" onAction="#endGame" text="End Game" />
       <AnchorPane fx:id="pile" layoutX="14.0" layoutY="14.0" onMouseClicked="#clickedPile" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
@@ -14,12 +14,12 @@
       <AnchorPane fx:id="foundationDiamonds" layoutX="750.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="150.0" />
       <AnchorPane fx:id="foundationSpades" layoutX="618.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="282.0" />
       <AnchorPane fx:id="foundationHearts" layoutX="486.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" />
-      <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="20.0" prefHeight="45.0" prefWidth="156.0" text="Name" textAlignment="CENTER">
+      <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="20.0" prefHeight="45.0" prefWidth="156.0" text="Name" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="scoreboard" alignment="CENTER" layoutX="311.0" layoutY="52.0" prefHeight="109.0" prefWidth="156.0" text="0" textAlignment="CENTER">
+      <Label fx:id="scoreboard" alignment="CENTER" layoutX="311.0" layoutY="52.0" prefHeight="109.0" prefWidth="156.0" text="0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="65.0" />
          </font>
