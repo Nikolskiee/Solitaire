@@ -211,6 +211,8 @@ public class GameOneController
 			return;
 		}
 		buffer = null;
+		fromHearts = false;
+		fromWaste = false;
 		isFirstClick = true;
 	}
 	
@@ -293,6 +295,8 @@ public class GameOneController
 			return;
 		}
 
+		fromSpades = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
@@ -375,6 +379,8 @@ public class GameOneController
 			return;
 		}
 		
+		fromDiamonds = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
@@ -456,6 +462,8 @@ public class GameOneController
 			refreshScene();
 			return;
 		}
+		fromClubs = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
