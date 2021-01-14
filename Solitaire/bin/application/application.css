@@ -1,2 +1,11 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
+.bodybg {
+	-fx-background-image: url('/bg_revised.jpg');
+	-fx-background-size: 100% 100%;   
+}
+
+.gameMode {
+	-fx-background-image: url('/background.jpg');
+	-fx-background-size: 100% 100%;   
+}

@@ -28,7 +28,7 @@ public class ModeController {
 	public void setModeAs1Waste()
 	{
 
-			Main.player = name.getText();
+			Main.player = (name.getText().compareTo("") == 0)? "Player" : name.getText();
 			Main.mode = 1;
 			main.exit();
 			main.startGameOne();
@@ -39,7 +39,7 @@ public class ModeController {
 	public void setModeAs3Waste()
 	{
 
-			Main.player = name.getText();
+			Main.player = (name.getText().compareTo("") == 0)? "Player" : name.getText();
 			Main.mode = 3;
 			main.exit();
 			main.startGameOne();

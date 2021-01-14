@@ -537,6 +537,7 @@ public class GameOneController
 			}
 		}
 		
+		buffer = null;
 		fromWaste = false;
 		fromHearts = false;
 		fromSpades = false;
@@ -620,6 +621,7 @@ public class GameOneController
 					}
 				}
 			}
+			buffer = null;
 		}
 		fromWaste = false;
 		fromHearts = false;
