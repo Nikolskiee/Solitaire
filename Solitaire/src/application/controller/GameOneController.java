@@ -6,6 +6,7 @@ import application.Main;
 import application.model.Card;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -654,42 +655,51 @@ public class GameOneController
 		if(cardFoundationHearts[0] != null)
 		{
 			foundationHearts.setStyle("-fx-background-image: url('" + cardFoundationHearts[heartsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
+			foundationHearts.setCursor(Cursor.HAND);
 		}
 		else
 		{
 			foundationHearts.setStyle("-fx-background-image: url('AH.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
+			foundationHearts.setCursor(Cursor.DEFAULT);
 		}
 		
 		if(cardFoundationSpades[0] != null)
 		{
 			foundationSpades.setStyle("-fx-background-image: url('" + cardFoundationSpades[spadesPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
+			foundationSpades.setCursor(Cursor.HAND);
 		}
 		else
 		{
 			foundationSpades.setStyle("-fx-background-image: url('AS.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
+			foundationSpades.setCursor(Cursor.DEFAULT);
 		}
 		
 		if(cardFoundationDiamonds[0] != null)
 		{
 			foundationDiamonds.setStyle("-fx-background-image: url('" + cardFoundationDiamonds[diamondsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
+			foundationDiamonds.setCursor(Cursor.HAND);
 		}
 		else
 		{
 			foundationDiamonds.setStyle("-fx-background-image: url('AD.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
+			foundationDiamonds.setCursor(Cursor.DEFAULT);
 		}
 		
 		if(cardFoundationClubs[0] != null)
 		{
 			foundationClubs.setStyle("-fx-background-image: url('" + cardFoundationClubs[clubsPointer - 1] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
+			foundationClubs.setCursor(Cursor.HAND);
 		}
 		else
 		{
 			foundationClubs.setStyle("-fx-background-image: url('AC.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.10");
+			foundationClubs.setCursor(Cursor.DEFAULT);
 		}
 
 		int pointer = (wastePointer - Main.mode < 0)? 0 : wastePointer - Main.mode;
 		waste.getChildren().clear();
 		int translate = 0;
+		waste.setCursor(Cursor.DEFAULT);
 		while (pointer < wastePointer)
 		{
 			if(cardWaste[pointer] != null)
@@ -705,6 +715,7 @@ public class GameOneController
 				}
 				StackPane.setAlignment(card, Pos.CENTER_LEFT);
 				card.setTranslateX(translate);
+				card.setCursor(Cursor.HAND);
 				waste.getChildren().add(card);
 				translate += 30;
 			}
@@ -719,6 +730,7 @@ public class GameOneController
 		{
 			pile.setStyle("-fx-background-image: url('gray.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.50");
 		}
+		pile.setCursor(Cursor.HAND);
 		
 		StackPane[] tableu = {tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7};
 		
@@ -735,6 +747,7 @@ public class GameOneController
 				card.setStyle("-fx-background-color: black; -fx-background-size: 100px 150px; -fx-background-repeat: no-repeat; -fx-opacity: 0.50");
 				int row = j;
 				card.setOnMouseClicked(event -> clickedOnTableu(row));
+				card.setCursor(Cursor.DEFAULT);
 				StackPane.setAlignment(card, Pos.TOP_CENTER);
 				tableu[j].getChildren().add(card);
 				continue;
@@ -755,10 +768,12 @@ public class GameOneController
 					int row = j;
 					int column = i;
 					card.setOnMouseClicked(event -> clickedOnTableu(row, column));
+					card.setCursor(Cursor.HAND);
 				}
 				else
 				{
 					card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+					card.setCursor(Cursor.DEFAULT);
 				}
 				StackPane.setAlignment(card, Pos.TOP_CENTER);
 				card.setTranslateY(y);
