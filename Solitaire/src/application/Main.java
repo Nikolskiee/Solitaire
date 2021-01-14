@@ -14,7 +14,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-
+import javafx.scene.image.Image;
 
 
 public class Main extends Application {
@@ -56,6 +56,7 @@ public class Main extends Application {
 
 			Scene scene = new Scene(menu);
 			scene.getStylesheets().add("application/application.css");
+			primaryStage.getIcons().add(new Image("icon.jpg"));
 			primaryStage.setTitle("Solitaire");
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
@@ -80,6 +81,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
+			secondaryStage.getIcons().add(new Image("icon.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
@@ -105,6 +107,7 @@ public class Main extends Application {
 
 			Scene scene = new Scene(game);
 			scene.getStylesheets().add("application/application.css");
+			primaryStage.getIcons().add(new Image("icon.jpg"));
 			primaryStage.setTitle("Solitaire");
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
@@ -129,6 +132,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
+			secondaryStage.getIcons().add(new Image("icon.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
