@@ -622,15 +622,15 @@ public class GameOneController
 				}
 			}
 			buffer = null;
+			fromWaste = false;
+			fromHearts = false;
+			fromSpades = false;
+			fromDiamonds = false;
+			fromClubs = false;
+			originTableu = null;
+			isFirstClick = true;
+			refreshScene();
 		}
-		fromWaste = false;
-		fromHearts = false;
-		fromSpades = false;
-		fromDiamonds = false;
-		fromClubs = false;
-		originTableu = null;
-		isFirstClick = true;
-		refreshScene();
 	}
 	
 	public void refreshScene()
