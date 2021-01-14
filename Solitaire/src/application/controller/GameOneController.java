@@ -475,11 +475,11 @@ public class GameOneController
 		{
 			buffer = null;
 			isFirstClick = true;
+			fromHearts = false;
+			fromSpades = false;
+			fromDiamonds = false;
+			fromClubs = false;
 		}
-		fromHearts = false;
-		fromSpades = false;
-		fromDiamonds = false;
-		fromClubs = false;
 	}
 	
 	public void clickedOnTableu(int row) //for an empty row
