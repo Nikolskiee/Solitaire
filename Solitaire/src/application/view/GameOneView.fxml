@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
+<AnchorPane prefHeight="700.0" prefWidth="966.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
    <children>
-      <ImageView fitHeight="721.0" fitWidth="1000.0" layoutY="-21.0">
+      <ImageView fitHeight="721.0" fitWidth="967.0" layoutY="-21.0">
          <image>
             <Image url="@../../background.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="887.0" layoutY="640.0" mnemonicParsing="false" onAction="#endGame" prefHeight="30.0" prefWidth="80.0" text="End Game">
+      <Button layoutX="900.0" layoutY="650.0" mnemonicParsing="false" onAction="#endGame" prefHeight="30.0" prefWidth="53.0" text="End">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
@@ -40,23 +40,23 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationClubs" layoutX="737.0" layoutY="34.0" onMouseClicked="#clickedOnClubs" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane fx:id="foundationClubs" layoutX="839.0" layoutY="20.0" onMouseClicked="#clickedOnClubs" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="20.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationDiamonds" layoutX="750.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="150.0">
+      <AnchorPane fx:id="foundationDiamonds" layoutX="718.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="149.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationSpades" layoutX="618.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="282.0">
+      <AnchorPane fx:id="foundationSpades" layoutX="594.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="273.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationHearts" layoutX="486.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;">
+      <AnchorPane fx:id="foundationHearts" layoutX="466.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="50.0" prefHeight="45.0" prefWidth="156.0" text="Name" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="283.0" layoutY="50.0" prefHeight="45.0" prefWidth="156.0" text="Name" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial" size="30.0" />
          </font>
@@ -71,7 +71,7 @@
             </Lighting>
          </effect>
       </Label>
-      <Label fx:id="scoreboard" alignment="CENTER" layoutX="299.0" layoutY="95.0" prefHeight="45.0" prefWidth="156.0" text="0" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="scoreboard" alignment="CENTER" layoutX="283.0" layoutY="95.0" prefHeight="45.0" prefWidth="156.0" text="0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
