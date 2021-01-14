@@ -5,6 +5,7 @@ package application.controller;
 import application.Main;
 import application.model.Card;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -211,6 +212,8 @@ public class GameOneController
 			return;
 		}
 		buffer = null;
+		fromHearts = false;
+		fromWaste = false;
 		isFirstClick = true;
 	}
 	
@@ -293,6 +296,8 @@ public class GameOneController
 			return;
 		}
 
+		fromSpades = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
@@ -375,6 +380,8 @@ public class GameOneController
 			return;
 		}
 		
+		fromDiamonds = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
@@ -456,6 +463,8 @@ public class GameOneController
 			refreshScene();
 			return;
 		}
+		fromClubs = false;
+		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
 	}
@@ -686,12 +695,15 @@ public class GameOneController
 			if(cardWaste[pointer] != null)
 			{
 				Pane card = new Pane();
-				card.setPrefSize(100, 150);
+				card.setMinSize(100,150);
+				card.setPrefSize(100,150);
+				card.setMaxSize(100,150);
 				card.setStyle("-fx-background-image: url('" + cardWaste[pointer] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
 				if(pointer == wastePointer - 1)
 				{
 					card.setOnMouseClicked(event -> clickedOnWaste());
 				}
+				StackPane.setAlignment(card, Pos.CENTER_LEFT);
 				card.setTranslateX(translate);
 				waste.getChildren().add(card);
 				translate += 30;
@@ -701,11 +713,11 @@ public class GameOneController
 		
 		if (cardPile[0] != null)
 		{
-			pile.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1");
+			pile.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1");
 		}
 		else
 		{
-			pile.setStyle("-fx-background-image: url('gray.jpg'); -fx-background-size: 100%; -fx-opacity: 0.10");
+			pile.setStyle("-fx-background-image: url('gray.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 0.50");
 		}
 		
 		StackPane[] tableu = {tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7};
@@ -717,10 +729,13 @@ public class GameOneController
 			if(cardTableu[j][0] == null)
 			{
 				Pane card = new Pane();
-				card.setPrefSize(100, 150);
-				card.setStyle("-fx-background-image url: ('gray.jpg'); -fx-background-repeat: no-repeat; -fx-opacity: 0.10");
+				card.setMinSize(100,150);
+				card.setPrefSize(100,150);
+				card.setMaxSize(100,150);
+				card.setStyle("-fx-background-color: black; -fx-background-size: 100px 150px; -fx-background-repeat: no-repeat; -fx-opacity: 0.50");
 				int row = j;
 				card.setOnMouseClicked(event -> clickedOnTableu(row));
+				StackPane.setAlignment(card, Pos.TOP_CENTER);
 				tableu[j].getChildren().add(card);
 				continue;
 			}
@@ -731,19 +746,21 @@ public class GameOneController
 			{
 				
 				Pane card = new Pane();
+				card.setMinSize(100,150);
 				card.setPrefSize(100,150);
+				card.setMaxSize(100,150);
 				if(cardTableu[j][i].isTurnedUp())
 				{
-					card.setStyle("-fx-background-image: url('" + cardTableu[j][i] + ".jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+					card.setStyle("-fx-background-image: url('" + cardTableu[j][i] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
 					int row = j;
 					int column = i;
 					card.setOnMouseClicked(event -> clickedOnTableu(row, column));
 				}
 				else
 				{
-					card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+					card.setStyle("-fx-background-image: url('/blue.jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
 				}
-				
+				StackPane.setAlignment(card, Pos.TOP_CENTER);
 				card.setTranslateY(y);
 				
 				y = y + 20;
