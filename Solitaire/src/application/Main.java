@@ -2,6 +2,7 @@ package application;
 	
 import java.io.IOException;
 
+import application.controller.GameCompleteController;
 import application.controller.GameOneController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
@@ -121,7 +122,7 @@ public class Main extends Application {
 		}
 	}
 	
-	public void startMode()
+	public void startMode() //shows Mode as secondary stage
 	{
 		try
 		{
@@ -142,6 +143,32 @@ public class Main extends Application {
 			ModeController controller = loader.getController();
 			controller.setMain(this);
 			controller.setStage(secondaryStage);
+	
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+	
+	public void startGameComplete() //shows the Game Complete as secondary stage
+	{
+		try
+		{
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/GameCompleteView.fxml"));
+			AnchorPane view = (AnchorPane) loader.load();
+	
+			Scene scene = new Scene(view);
+			Stage secondaryStage = new Stage();
+			secondaryStage.initModality( Modality.APPLICATION_MODAL);
+			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.setTitle("Solitaire");
+			secondaryStage.setResizable(false);
+			secondaryStage.initOwner(primaryStage);
+			secondaryStage.setScene(scene);
+			secondaryStage.show();
+			
+			GameCompleteController controller = loader.getController();
+			controller.show(this, secondaryStage);
 	
 		} catch (IOException ioe) {
 			ioe.printStackTrace();

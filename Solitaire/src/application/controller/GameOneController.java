@@ -786,6 +786,11 @@ public class GameOneController
 		}
 		
 		printInConsole();
+		
+		if (isGameComplete())
+		{
+			finishGame();
+		}
 	}
 	
 	public void printInConsole()
@@ -831,6 +836,23 @@ public class GameOneController
 			}
 			System.out.println();
 		}
+	}
+	
+	public boolean isGameComplete()
+	{
+		if (cardFoundationHearts[12] != null && cardFoundationSpades[12] != null && cardFoundationDiamonds[12] != null && cardFoundationClubs[12] != null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public void finishGame()
+	{
+		main.startGameComplete();
 	}
 	
 	@FXML
