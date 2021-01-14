@@ -4,35 +4,91 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="209.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModeController">
+<AnchorPane prefHeight="233.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModeController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="26.0" text="ENTER PLAYER NAME">
+      <ImageView fitHeight="246.0" fitWidth="417.0" layoutX="-4.0">
+         <image>
+            <Image url="@../../background.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="38.0" text="ENTER PLAYER NAME" textFill="WHITE">
          <font>
-            <Font name="GothamPro-Medium" size="24.0" />
+            <Font name="Arial Bold" size="24.0" />
          </font>
+         <effect>
+            <Lighting diffuseConstant="1.28">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </Label>
-      <Button layoutX="94.0" layoutY="152.0" mnemonicParsing="false" onAction="#setModeAs1Waste" prefHeight="31.0" prefWidth="82.0" text="1 WASTE" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="94.0">
+      <Button layoutX="100.0" layoutY="168.0" mnemonicParsing="false" onAction="#setModeAs1Waste" prefHeight="31.0" prefWidth="82.0" text="1 WASTE" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="100.0">
          <font>
-            <Font name="GothamPro" size="12.0" />
-         </font></Button>
-      <Button layoutX="235.0" layoutY="152.0" mnemonicParsing="false" onAction="#setModeAs3Waste" prefHeight="31.0" prefWidth="82.0" text="3 WASTES" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="98.0">
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.47">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="230.0" layoutY="168.0" mnemonicParsing="false" onAction="#setModeAs3Waste" prefHeight="31.0" prefWidth="82.0" text="3 WASTES" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="101.0">
          <font>
-            <Font name="GothamPro" size="12.0" />
-         </font></Button>
-      <TextField fx:id="name" alignment="CENTER" layoutX="67.0" layoutY="64.0" prefHeight="39.0" prefWidth="274.0">
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.51">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="name" alignment="CENTER" layoutX="68.0" layoutY="78.0" prefHeight="39.0" prefWidth="274.0">
          <font>
-            <Font name="GothamPro-Light" size="12.0" />
+            <Font name="Arial" size="12.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="115.0" prefHeight="25.0" prefWidth="274.0" text="Select Game Mode">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="141.0" prefHeight="25.0" prefWidth="274.0" text="Select Game Mode" textFill="WHITE">
          <font>
-            <Font name="GothamPro" size="24.0" />
+            <Font name="Arial" size="24.0" />
          </font>
+         <effect>
+            <Lighting diffuseConstant="1.33">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </Label>
    </children>
 </AnchorPane>
