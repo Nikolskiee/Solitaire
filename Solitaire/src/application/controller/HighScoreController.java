@@ -17,7 +17,7 @@ public class HighScoreController {
 	private Stage stage;
 	
 	@FXML
-	AnchorPane tablePane;
+	private AnchorPane tablePane;
 	
 	private ObservableList<Scores> tableData;
 	private TableView<Scores> table;

@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 public class ModeController {
 	
-	Main main;
+	private Main main;
 	
 	@FXML
 	private TextField name;

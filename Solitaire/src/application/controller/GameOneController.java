@@ -14,40 +14,40 @@ import javafx.scene.layout.StackPane;
 
 public class GameOneController
 {
-	Main main;
-	int wastePointer = 0;
-	int pilePointer = 23;
-	int heartsPointer = 0;
-	int	spadesPointer = 0;
-	int diamondsPointer = 0;
-	int clubsPointer = 0;
-	int[] originTableu = null;
-	boolean isFirstClick = true;
-	boolean fromWaste = false;
-	boolean fromHearts = false;
-	boolean fromSpades = false;
-	boolean fromDiamonds = false;
-	boolean fromClubs = false;
-	Card[] buffer = new Card[13];
+	private Main main;
+	private int wastePointer = 0;
+	private int pilePointer = 23;
+	private int heartsPointer = 0;
+	private int	spadesPointer = 0;
+	private int diamondsPointer = 0;
+	private int clubsPointer = 0;
+	private int[] originTableu = null;
+	private boolean isFirstClick = true;
+	private boolean fromWaste = false;
+	private boolean fromHearts = false;
+	private boolean fromSpades = false;
+	private boolean fromDiamonds = false;
+	private boolean fromClubs = false;
+	private Card[] buffer = new Card[13];
 	
-	Card[] cardPile = new Card[24];
-	Card[] cardWaste = new Card[24];
-	Card[] cardFoundationHearts = new Card[13];
-	Card[] cardFoundationSpades = new Card[13];
-	Card[] cardFoundationDiamonds = new Card[13];
-	Card[] cardFoundationClubs = new Card[13];
-	Card[][] cardTableu = new Card[7][52];
+	private Card[] cardPile = new Card[24];
+	private Card[] cardWaste = new Card[24];
+	private Card[] cardFoundationHearts = new Card[13];
+	private Card[] cardFoundationSpades = new Card[13];
+	private Card[] cardFoundationDiamonds = new Card[13];
+	private Card[] cardFoundationClubs = new Card[13];
+	private Card[][] cardTableu = new Card[7][52];
 	
 			
 			
 	@FXML
-	AnchorPane pile, foundationHearts, foundationSpades, foundationDiamonds, foundationClubs;
+	private AnchorPane pile, foundationHearts, foundationSpades, foundationDiamonds, foundationClubs;
 	
 	@FXML
-	StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7, waste;
+	private StackPane tableu1, tableu2, tableu3, tableu4, tableu5, tableu6, tableu7, waste;
 	
 	@FXML
-	Label scoreboard, name;
+	private Label scoreboard, name;
 
 	public void setMain(Main main)
 	{
@@ -712,10 +712,14 @@ public class GameOneController
 				if(pointer == wastePointer - 1)
 				{
 					card.setOnMouseClicked(event -> clickedOnWaste());
+					card.setCursor(Cursor.HAND);
+				}
+				else
+				{
+					card.setCursor(Cursor.DEFAULT);
 				}
 				StackPane.setAlignment(card, Pos.CENTER_LEFT);
 				card.setTranslateX(translate);
-				card.setCursor(Cursor.HAND);
 				waste.getChildren().add(card);
 				translate += 30;
 			}

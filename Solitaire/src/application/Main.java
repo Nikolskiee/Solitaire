@@ -20,7 +20,7 @@ import javafx.scene.image.Image;
 
 public class Main extends Application {
 	
-	Stage primaryStage; //stores the "front" view of the application.
+	private Stage primaryStage; //stores the "front" view of the application.
 	public static Scores[] high = new Scores[1000000];
 	public static int mode;
 	public static String player = "Player";

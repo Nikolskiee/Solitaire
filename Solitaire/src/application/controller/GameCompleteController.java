@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 public class GameCompleteController {
 	
 	@FXML
-	Label name, score;
+	private Label name, score;
 	
-	Main main;
-	Stage stage;
+	private Main main;
+	private Stage stage;
 	
 	
 	public void show(Main main, Stage stage)

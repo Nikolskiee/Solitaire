@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 
 public class MainMenuController {
 	
-	Main main;
+	private Main main;
 	
 	public void setMain(Main main)
 	{
