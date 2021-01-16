@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="966.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
+<AnchorPane prefHeight="700.0" prefWidth="966.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
    <children>
       <ImageView fitHeight="721.0" fitWidth="967.0" layoutY="-21.0">
          <image>
             <Image url="@../../background.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="900.0" layoutY="650.0" mnemonicParsing="false" onAction="#endGame" prefHeight="30.0" prefWidth="53.0" text="End">
+      <Button fx:id="button" layoutX="900.0" layoutY="650.0" mnemonicParsing="false" onAction="#endGame" prefHeight="30.0" prefWidth="53.0" text="End">
          <font>
             <Font name="Arial" size="12.0" />
          </font>

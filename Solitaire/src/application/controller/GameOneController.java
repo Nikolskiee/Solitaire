@@ -7,6 +7,7 @@ import application.model.Card;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -48,6 +49,9 @@ public class GameOneController
 	
 	@FXML
 	private Label scoreboard, name;
+	
+	@FXML 
+	private Button button;
 
 	public void setMain(Main main)
 	{
@@ -643,7 +647,7 @@ public class GameOneController
 		}
 	}
 	
-	public void refreshScene()
+	private void refreshScene()
 	{
 		updateTurnedUpCards();
 		
@@ -651,6 +655,11 @@ public class GameOneController
 		
 		scoreboard.setText("" + Main.score);
 		name.setText(Main.player);
+		
+		if(isTableauComplete())
+		{
+			button.setText("Solve");
+		}
 		
 		if(cardFoundationHearts[0] != null)
 		{
@@ -797,7 +806,7 @@ public class GameOneController
 		}
 	}
 	
-	public void printInConsole()
+	private void printInConsole()
 	{
 		System.out.println("Pile:");
 		int i = 0;
@@ -842,7 +851,7 @@ public class GameOneController
 		}
 	}
 	
-	public boolean isGameComplete()
+	private boolean isGameComplete()
 	{
 		if (cardFoundationHearts[12] != null && cardFoundationSpades[12] != null && cardFoundationDiamonds[12] != null && cardFoundationClubs[12] != null)
 		{
@@ -854,14 +863,65 @@ public class GameOneController
 		}
 	}
 	
-	public void finishGame()
+	private void finishGame()
 	{
 		main.startGameComplete();
+	}
+	
+	private boolean isTableauComplete()
+	{
+		boolean yes = true;
+		
+		for(int j = 0; j < 52; j++)
+		{
+			for (int i = 0; i < 7; i++)
+			{
+				if (cardTableu[i][j] != null && !cardTableu[i][j].isTurnedUp())
+				{
+					yes = false;
+				}
+			}
+		}
+		return yes && cardWaste[0] == null && cardPile[0] == null;
 	}
 	
 	@FXML
 	public void endGame()
 	{
-		main.startGameNotComplete();
+		if(isTableauComplete())
+		{
+			solve();
+		}
+		else
+		{
+			main.startGameNotComplete();
+		}
+	}
+	
+	private void solve()
+	{
+		for(int j = 0; j < 52; j++)
+		{
+			for (int i = 0; i < 7; i++)
+			{
+				if(cardTableu[i][j] != null)
+				{
+					cardTableu[i][j] = null;
+					Main.score += 10;
+				}
+			}
+		}
+		
+		cardFoundationHearts[12] = new Card(13,'H', true);
+		cardFoundationSpades[12] = new Card(13, 'S', true);
+		cardFoundationDiamonds[12] = new Card(13, 'D', true);
+		cardFoundationClubs[12] = new Card(13, 'C', true);
+		
+		heartsPointer = 13;
+		spadesPointer = 13;
+		diamondsPointer = 13;
+		clubsPointer = 13;
+		
+		refreshScene();
 	}
 }
