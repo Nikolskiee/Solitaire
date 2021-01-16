@@ -27,7 +27,7 @@ public class HighScoreController {
 		table = new TableView<Scores>();
 		
 		int i = 0;
-		while(high[i] != null && i < high.length)
+		while(i < high.length && high[i] != null)
 		{
 			tableData.add(high[i]);
 			i++;

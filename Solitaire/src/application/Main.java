@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 
 import application.controller.GameCompleteController;
+import application.controller.GameNotCompleteController;
 import application.controller.GameOneController;
 import application.controller.HighScoreController;
 import application.controller.MainMenuController;
@@ -21,7 +22,7 @@ import javafx.scene.image.Image;
 public class Main extends Application {
 	
 	private Stage primaryStage; //stores the "front" view of the application.
-	public static Scores[] high = new Scores[1000000];
+	public static Scores[] high = new Scores[10];
 	public static int mode;
 	public static String player = "Player";
 	public static Deck deck;
@@ -41,7 +42,7 @@ public class Main extends Application {
 			high[6] = new Scores ("Will", 200);
 			high[7] = new Scores ("Cornelius", 150);
 			high[8] = new Scores ("Beatrice", 100);
-			high[9] = new Scores ("Sekki", 50);
+			high[9] = new Scores ("Kristine", 50);
 		}
 		this.primaryStage = primaryStage;
 		startMainMenu();
@@ -175,6 +176,32 @@ public class Main extends Application {
 		}
 	}
 	
+	public void startGameNotComplete() //shows the Game Not Complete as secondary stage
+	{
+		try
+		{
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("view/GameNotCompleteView.fxml"));
+			AnchorPane view = (AnchorPane) loader.load();
+	
+			Scene scene = new Scene(view);
+			Stage secondaryStage = new Stage();
+			secondaryStage.initModality( Modality.APPLICATION_MODAL);
+			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.setTitle("Solitaire");
+			secondaryStage.setResizable(false);
+			secondaryStage.initOwner(primaryStage);
+			secondaryStage.setScene(scene);
+			secondaryStage.show();
+			
+			GameNotCompleteController controller = loader.getController();
+			controller.show(this, secondaryStage);
+	
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+	
 	
 	public void exit() //closes the program.
 	{
@@ -187,7 +214,7 @@ public class Main extends Application {
 		
 		Scores record = new Scores(name, score);
 		
-		while(true)
+		while(i < 10)
 		{
 			if(high[i] == null)
 			{

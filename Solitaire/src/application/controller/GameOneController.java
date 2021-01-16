@@ -862,8 +862,6 @@ public class GameOneController
 	@FXML
 	public void endGame()
 	{
-		main.recordScore(Main.player, Main.score);
-		main.exit();
-		main.startMainMenu();
+		main.startGameNotComplete();
 	}
 }

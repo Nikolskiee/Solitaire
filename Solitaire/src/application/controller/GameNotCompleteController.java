@@ -1,0 +1,35 @@
+package application.controller;
+
+import application.Main;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+public class GameNotCompleteController {
+
+	@FXML
+	private Label name, score;
+	
+	private Main main;
+	private Stage stage;
+	
+	
+	public void show(Main main, Stage stage)
+	{
+		this.main = main;
+		this.stage = stage;
+		
+		name.setText(Main.player);
+		score.setText("" + Main.score);
+		main.recordScore(Main.player, Main.score);
+	}
+	
+	@FXML
+	public void backToMenu()
+	{
+		main.exit();
+		main.startMainMenu();
+		stage.close();
+	}
+	
+}
