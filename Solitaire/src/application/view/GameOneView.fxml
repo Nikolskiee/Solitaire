@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="966.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
+<AnchorPane prefHeight="700.0" prefWidth="966.0" styleClass="gameMode" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameOneController">
    <children>
       <ImageView fitHeight="721.0" fitWidth="967.0" layoutY="-21.0">
          <image>
-            <Image url="@../../background.jpg" />
+            <Image url="@../../newBG5.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="900.0" layoutY="650.0" mnemonicParsing="false" onAction="#endGame" prefHeight="30.0" prefWidth="53.0" text="End">
+      <Button fx:id="button" layoutX="885.0" layoutY="644.0" mnemonicParsing="false" onAction="#endGame" prefHeight="42.0" prefWidth="68.0" styleClass="menu-button" text="End" textFill="WHITE">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
@@ -36,23 +36,23 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <AnchorPane fx:id="pile" layoutX="33.0" layoutY="20.0" onMouseClicked="#clickedPile" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane fx:id="pile" layoutX="33.0" layoutY="20.0" onMouseClicked="#clickedPile" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="card-pane" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="20.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationClubs" layoutX="839.0" layoutY="20.0" onMouseClicked="#clickedOnClubs" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane fx:id="foundationClubs" layoutX="839.0" layoutY="20.0" onMouseClicked="#clickedOnClubs" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="card-pane" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="20.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationDiamonds" layoutX="718.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="149.0">
+      <AnchorPane fx:id="foundationDiamonds" layoutX="718.0" layoutY="20.0" onMouseClicked="#clickedOnDiamonds" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="card-pane" AnchorPane.rightAnchor="149.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationSpades" layoutX="594.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="273.0">
+      <AnchorPane fx:id="foundationSpades" layoutX="594.0" layoutY="20.0" onMouseClicked="#clickedOnSpades" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="card-pane" AnchorPane.rightAnchor="273.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
-      <AnchorPane fx:id="foundationHearts" layoutX="466.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;">
+      <AnchorPane fx:id="foundationHearts" layoutX="466.0" layoutY="20.0" onMouseClicked="#clickedOnHearts" opacity="0.25" prefHeight="150.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="card-pane">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></AnchorPane>
@@ -86,31 +86,31 @@
             </Lighting>
          </effect>
       </Label>
-      <StackPane fx:id="tableu1" layoutX="83.0" layoutY="170.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu1" layoutX="83.0" layoutY="170.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu2" layoutX="199.0" layoutY="181.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu2" layoutX="199.0" layoutY="181.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu3" layoutX="311.0" layoutY="175.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu3" layoutX="311.0" layoutY="175.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu4" layoutX="426.0" layoutY="175.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu4" layoutX="426.0" layoutY="175.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu5" layoutX="544.0" layoutY="175.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu5" layoutX="544.0" layoutY="175.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu6" layoutX="668.0" layoutY="175.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu6" layoutX="668.0" layoutY="175.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>
-      <StackPane fx:id="tableu7" layoutX="789.0" layoutY="175.0" prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <StackPane fx:id="tableu7" layoutX="789.0" layoutY="175.0" prefHeight="520.0" prefWidth="100.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.topAnchor="200.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></StackPane>

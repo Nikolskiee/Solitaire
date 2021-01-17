@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -16,28 +15,13 @@
    <children>
       <ImageView blendMode="DARKEN" fitHeight="450.0" fitWidth="609.0" preserveRatio="true">
          <image>
-            <Image url="@../../bg_revised.jpg" />
+            <Image url="@../../newBG.jpg" />
          </image>
          <effect>
             <Blend />
          </effect>
       </ImageView>
-      <Label layoutX="100.0" layoutY="130.0" lineSpacing="5.0" text="SOLITAIRE" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="75.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="1.19" specularConstant="1.63" specularExponent="40.0" surfaceScale="1.27">
-               <bumpInput>
-                  <Shadow blurType="ONE_PASS_BOX" />
-               </bumpInput>
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
-         </effect>
-      </Label>
-      <Button layoutX="132.0" layoutY="236.0" mnemonicParsing="false" onAction="#showGame" prefHeight="32.0" prefWidth="150.0" text="New Game">
+      <Button layoutX="180.0" layoutY="118.0" mnemonicParsing="false" onAction="#showGame" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="New Game" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -55,7 +39,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="312.0" layoutY="236.0" mnemonicParsing="false" onAction="#showHighScore" prefHeight="37.0" prefWidth="150.0" text="High Score">
+      <Button layoutX="312.0" layoutY="118.0" mnemonicParsing="false" onAction="#showHighScore" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="High Score" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -73,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="501.0" layoutY="378.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="58.0" text="Exit">
+      <Button layoutX="528.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="58.0" styleClass="menu-button" text="Exit" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>

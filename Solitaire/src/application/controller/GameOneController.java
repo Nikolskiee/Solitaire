@@ -4,11 +4,13 @@ package application.controller;
 
 import application.Main;
 import application.model.Card;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -154,6 +156,7 @@ public class GameOneController
 			buffer[0] = cardFoundationHearts[heartsPointer - 1];
 			fromHearts = true;
 			isFirstClick = false;
+			foundationHearts.setStyle("-fx-background-image: url('" + cardFoundationHearts[heartsPointer - 1] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-background-size: 100px 150px; -fx-opacity: 1");
 			return;
 		}
 		if(!isFirstClick && buffer[1] == null && cardFoundationHearts[0] == null && buffer[0].toString().compareTo("AH") == 0)
@@ -183,6 +186,7 @@ public class GameOneController
 			fromWaste = false;
 			buffer = null;
 			isFirstClick = true;
+			//foundationHearts.setStyle("-fx-background-image: url('" + cardFoundationHearts[heartsPointer - 1] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-background-size: 100px 150px; -fx-opacity: 1");
 			refreshScene();
 			return;
 		}
@@ -237,6 +241,7 @@ public class GameOneController
 			buffer[0] = cardFoundationSpades[spadesPointer - 1];
 			fromSpades = true;
 			isFirstClick = false;
+			foundationSpades.setStyle("-fx-background-image: url('" + cardFoundationSpades[spadesPointer - 1] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-background-size: 100px 150px; -fx-opacity: 1");
 			return;
 		}
 
@@ -322,6 +327,7 @@ public class GameOneController
 			buffer[0] = cardFoundationDiamonds[diamondsPointer - 1];
 			fromDiamonds = true;
 			isFirstClick = false;
+			foundationDiamonds.setStyle("-fx-background-image: url('" + cardFoundationDiamonds[diamondsPointer - 1] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-background-size: 100px 150px; -fx-opacity: 1");
 			return;
 		}
 		if(!isFirstClick && buffer[1] == null && cardFoundationDiamonds[0] == null && buffer[0].toString().compareTo("AD") == 0)
@@ -406,6 +412,7 @@ public class GameOneController
 			buffer[0] = cardFoundationClubs[clubsPointer - 1];
 			fromClubs = true;
 			isFirstClick = false;
+			foundationClubs.setStyle("-fx-background-image: url('" + cardFoundationClubs[clubsPointer - 1] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-background-size: 100px 150px; -fx-opacity: 1");
 			return;
 		}
 		if(!isFirstClick && buffer[1] == null && cardFoundationClubs[0] == null && buffer[0].toString().compareTo("AC") == 0)
@@ -718,9 +725,16 @@ public class GameOneController
 				card.setPrefSize(100,150);
 				card.setMaxSize(100,150);
 				card.setStyle("-fx-background-image: url('" + cardWaste[pointer] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+				int ptr = pointer;
 				if(pointer == wastePointer - 1)
 				{
-					card.setOnMouseClicked(event -> clickedOnWaste());
+					//card.setOnMouseClicked(event -> clickedOnWaste());
+					card.setOnMouseClicked(new EventHandler<MouseEvent>(){
+	                    public void handle(MouseEvent event) {
+	                    	clickedOnWaste();
+	                    	card.setStyle("-fx-background-image: url('" + cardWaste[ptr] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 5; -fx-border-insets: 0.5,0.5,0,0; -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+	                    }
+					});
 					card.setCursor(Cursor.HAND);
 				}
 				else
@@ -780,7 +794,13 @@ public class GameOneController
 					card.setStyle("-fx-background-image: url('" + cardTableu[j][i] + ".jpg'); -fx-background-size: 100px 150px; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
 					int row = j;
 					int column = i;
-					card.setOnMouseClicked(event -> clickedOnTableu(row, column));
+					card.setOnMouseClicked(new EventHandler<MouseEvent>(){
+	                    public void handle(MouseEvent event) {
+	                        clickedOnTableu(row, column);
+	            			card.setMaxSize(100,550);
+	                    	card.setStyle("-fx-background-image: url('" + cardTableu[row][column] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 3;-fx-background-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #00e9967a 62%, #ff0000 88%); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+	                    }
+					});
 					card.setCursor(Cursor.HAND);
 				}
 				else
