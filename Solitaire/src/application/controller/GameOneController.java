@@ -495,6 +495,7 @@ public class GameOneController
 		if(!isFirstClick)
 		{
 			buffer = null;
+			fromWaste = false;
 			isFirstClick = true;
 			fromHearts = false;
 			fromSpades = false;
