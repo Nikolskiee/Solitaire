@@ -45,17 +45,5 @@ public class Deck {
 	{
 		return pointer + 1;
 	}
-	
-	
-	public static void main (String[] args) 
-	{
-		//just ignore this one, triny ko lang kung nagana ba yung Deck.java and Card.java hehe
-		
-		Deck sol = new Deck();
-		sol.shuffle();
-		System.out.println(sol.popCard());
-		System.out.println(sol.popCard());
-		
-	}
 
 }

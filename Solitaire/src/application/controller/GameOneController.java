@@ -59,7 +59,7 @@ public class GameOneController
 	{
 		this.main = main;
 		System.out.println("Welcome! " + Main.player);
-		System.out.println("Mode: 1 Waste");
+		System.out.println("Mode: " + Main.mode + " Waste");
 		setup();
 		refreshScene();
 
