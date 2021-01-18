@@ -804,7 +804,7 @@ public class GameOneController
 	                    public void handle(MouseEvent event) {
 	                        clickedOnTableu(row, column);
 	            			card.setMaxSize(100,550);
-	                    	card.setStyle("-fx-background-image: url('" + cardTableu[row][column] + ".jpg'); -fx-border-color: #ffee00; -fx-border-width: 3;-fx-background-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #00e9967a 62%, #ff0000 88%); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
+	                    	card.setStyle("-fx-background-image: url('" + cardTableu[row][column] + ".jpg'); -fx-border-color: #ff00a2; -fx-border-width: 3;-fx-background-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #ff008840 62%, #ff0000 88%); -fx-background-size: 100%; -fx-opacity: 1; -fx-background-repeat: no-repeat;");
 	                    }
 					});
 					card.setCursor(Cursor.HAND);
