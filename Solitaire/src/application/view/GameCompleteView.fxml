@@ -49,7 +49,7 @@
             </Lighting>
          </effect>
       </Label>
-      <Button layoutX="223.0" layoutY="183.0" mnemonicParsing="false" onAction="#backToMenu" prefWidth="101.0" styleClass="menu-button" text="Main Menu" textFill="WHITE">
+      <Button layoutX="216.0" layoutY="176.0" mnemonicParsing="false" onAction="#backToMenu" prefWidth="101.0" styleClass="menu-button" text="Main Menu" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

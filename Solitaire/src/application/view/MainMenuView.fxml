@@ -21,7 +21,7 @@
             <Blend />
          </effect>
       </ImageView>
-      <Button layoutX="180.0" layoutY="118.0" mnemonicParsing="false" onAction="#showGame" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="New Game" textFill="WHITE">
+      <Button layoutX="169.0" layoutY="139.0" mnemonicParsing="false" onAction="#showGame" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="New Game" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -39,7 +39,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="312.0" layoutY="118.0" mnemonicParsing="false" onAction="#showHighScore" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="High Score" textFill="WHITE">
+      <Button layoutX="323.0" layoutY="139.0" mnemonicParsing="false" onAction="#showHighScore" prefHeight="42.0" prefWidth="106.0" styleClass="menu-button" text="High Score" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="528.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="58.0" styleClass="menu-button" text="Exit" textFill="WHITE">
+      <Button layoutX="519.0" layoutY="24.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="58.0" styleClass="menu-button" text="Exit" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>

@@ -19,7 +19,7 @@
             <Image url="@../../newBG2.jpg" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="tablePane" layoutX="25.0" layoutY="67.0" prefHeight="274.0" prefWidth="254.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0">
+      <AnchorPane fx:id="tablePane" layoutX="25.0" layoutY="67.0" prefHeight="262.0" prefWidth="254.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0">
          <effect>
             <Lighting diffuseConstant="1.53">
                <bumpInput>
@@ -38,7 +38,7 @@
             <DropShadow height="12.1" offsetY="2.0" radius="6.2925" spread="0.26" width="15.07" />
          </effect>
       </Label>
-      <Button layoutX="226.0" layoutY="349.0" mnemonicParsing="false" onAction="#close" styleClass="menu-button" text="Close" textFill="WHITE">
+      <Button layoutX="220.0" layoutY="349.0" mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="70.0" styleClass="menu-button" text="Close" textFill="WHITE">
          <effect>
             <Lighting diffuseConstant="1.47" specularExponent="40.0">
                <bumpInput>

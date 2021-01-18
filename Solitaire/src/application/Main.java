@@ -58,7 +58,7 @@ public class Main extends Application {
 
 			Scene scene = new Scene(menu);
 			scene.getStylesheets().add("application/application.css");
-			primaryStage.getIcons().add(new Image("icon.jpg"));
+			primaryStage.getIcons().add(new Image("icon1.jpg"));
 			primaryStage.setTitle("Solitaire");
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
@@ -83,7 +83,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.getIcons().add(new Image("icon1.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
@@ -109,7 +109,7 @@ public class Main extends Application {
 
 			Scene scene = new Scene(game);
 			scene.getStylesheets().add("application/application.css");
-			primaryStage.getIcons().add(new Image("icon.jpg"));
+			primaryStage.getIcons().add(new Image("icon1.jpg"));
 			primaryStage.setTitle("Solitaire");
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
@@ -134,7 +134,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.getIcons().add(new Image("icon1.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
@@ -161,7 +161,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.getIcons().add(new Image("icon1.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
@@ -187,7 +187,7 @@ public class Main extends Application {
 			Scene scene = new Scene(view);
 			Stage secondaryStage = new Stage();
 			secondaryStage.initModality( Modality.APPLICATION_MODAL);
-			secondaryStage.getIcons().add(new Image("icon.jpg"));
+			secondaryStage.getIcons().add(new Image("icon1.jpg"));
 			secondaryStage.setTitle("Solitaire");
 			secondaryStage.setResizable(false);
 			secondaryStage.initOwner(primaryStage);
