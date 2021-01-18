@@ -224,6 +224,7 @@ public class GameOneController
 		fromHearts = false;
 		fromWaste = false;
 		isFirstClick = true;
+		refreshScene();
 	}
 	
 	@FXML
@@ -310,6 +311,7 @@ public class GameOneController
 		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
+		refreshScene();
 	}
 	
 	@FXML
@@ -395,6 +397,7 @@ public class GameOneController
 		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
+		refreshScene();
 	}
 	
 	@FXML
@@ -479,6 +482,7 @@ public class GameOneController
 		fromWaste = false;
 		buffer = null;
 		isFirstClick = true;
+		refreshScene();
 	}
 	
 	@FXML
@@ -502,6 +506,7 @@ public class GameOneController
 			fromDiamonds = false;
 			fromClubs = false;
 		}
+		refreshScene();
 	}
 	
 	public void clickedOnTableu(int row) //for an empty row
